@@ -1,0 +1,16 @@
+<h3>{{event.title}}</h3>
+<p>{{event.description}}</p>
+<p>
+  <strong>Number of attendees:</strong>
+  {{event.attendeeCount}}</p>
+<p>
+  <strong>Location:</strong>
+  <br>
+  {{event.address.street1}}
+  {{#if event.address.street2}}
+    <br>
+    {{event.address.street2}}
+  {{/if}}
+  <br>
+  {{event.address.city}}, {{event.address.state}} {{event.address.zip}}
+</p>

@@ -1,0 +1,18 @@
+// Layout
+header {
+  @include outer-container;
+  h1 { @include span-columns(3); }
+  nav { @include span-columns(9); }
+}
+h1{
+  padding: 1em 0;
+}
+nav{
+  ul{
+    li{
+      display: inline-block;
+      padding: 1em;
+    }
+  }
+}
+
