@@ -4,6 +4,12 @@ import moduleForAcceptance from 'events-app/tests/helpers/module-for-acceptance'
 moduleForAcceptance('Acceptance | events');
 
 test('visiting / and clicking events takes us to the events page.', function(assert) {
+  let addresses = server.createList('address', 3);
+
+  addresses.forEach((address) => {
+    server.create('event', { address });
+  });
+
   visit('/');
 
   andThen(function() {
@@ -18,6 +24,12 @@ test('visiting / and clicking events takes us to the events page.', function(ass
 });
 
 test('visiting events and clicking an event takes us to that event page.', function(assert) {
+  let addresses = server.createList('address', 3);
+
+  addresses.forEach((address) => {
+    server.create('event', { address });
+  });
+
   visit('/events');
 
   andThen(function() {

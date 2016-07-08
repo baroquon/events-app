@@ -1,7 +1,7 @@
-import { Factory, faker, belongsTo } from 'ember-cli-mirage';
+import { Factory, faker } from 'ember-cli-mirage';
 
 export default Factory.extend({
-  title(i) { return `Event ${i + 1}`;},
-  description(i) { return  faker.lorem.paragraph(); },
-  attendeeCount(i) { return Math.floor((Math.random() * 30) + 1);}
+  title() { return `${faker.hacker.ingverb()} ${faker.hacker.noun()} ${faker.hacker.noun()}`;},
+  description() { return  faker.lorem.paragraph(); },
+  attendeeCount() { return Math.floor((Math.random() * 30) + 1);}
 });
