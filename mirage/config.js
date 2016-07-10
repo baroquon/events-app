@@ -14,4 +14,10 @@ export default function() {
   this.get('/addresses/:id', (schema, request) => {
     return schema.addresses.find(request.params.id);
   });
+  this.get('/people', (schema) => {
+    return schema.people.all();
+  });
+  this.get('/people/:id', (schema, request) => {
+    return schema.people.find(request.params.id);
+  });
 }
